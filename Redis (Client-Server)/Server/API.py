@@ -8,7 +8,7 @@ redis = redis.Redis(host='localhost',port=8000, charset="utf-8", decode_response
 
 class MyFunctions:
  
-    def __init__(self,workersURL):
+    def __init__(self,workersURL=[]):
         self.workersURL = workersURL
 
     def workers(self):
@@ -80,7 +80,7 @@ class MyFunctions:
         return (str(max(maxWorkers)))
 
 with SimpleXMLRPCServer(('localhost', 8001)) as server:
-    server.register_instance(MyFunctions([]), allow_dotted_names=True)
+    server.register_instance(MyFunctions(), allow_dotted_names=True)
     server.register_multicall_functions()
     print('Serving XML-RPC on localhost port 8001')
     

@@ -71,12 +71,12 @@ class XMLRPCServerThread(threading.Thread):
 if __name__ == "__main__":
 
     try:
-        w1 = XMLRPCServerThread(int(8002),Path("C:\\Users\\Andrea\\Documents\\Universitat\\3r\\Sistemes Distïbuits\\PRA 1\\CSV\\Catalunya.csv"))
+        w1 = XMLRPCServerThread(int(8002),Path("C:\\Users\\Andrea\\Documents\\Universitat\\3r\\Sistemes Distïbuits\\PRA_SD\\CSV\\Catalunya.csv"))
         w1.add()
         w1.daemon=True
         w1.start()
 
-        w2 = XMLRPCServerThread(int(8003),Path("C:\\Users\\Andrea\\Documents\\Universitat\\3r\\Sistemes Distïbuits\\PRA 1\\CSV\\Franca.csv"))
+        w2 = XMLRPCServerThread(int(8003),Path("C:\\Users\\Andrea\\Documents\\Universitat\\3r\\Sistemes Distïbuits\\PRA_SD\\CSV\\Franca.csv"))
         w2.add()
         w2.daemon=True
         w2.start()
